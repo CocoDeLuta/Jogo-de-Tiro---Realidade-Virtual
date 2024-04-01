@@ -37,4 +37,12 @@ public class PlayerController : MonoBehaviour
     {
         Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
     }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.CompareTag("Trap"))
+        {
+            other.gameObject.GetComponent<TrapController>().SpawnBoxes();
+            Destroy(other.gameObject);
+        }
+    }
 }

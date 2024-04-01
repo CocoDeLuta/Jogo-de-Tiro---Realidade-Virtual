@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  rb: {fileID: 8228084534150764515}
+  gameController: {fileID: 0}
 --- !u!54 &8228084534150764515
 Rigidbody:
   m_ObjectHideFlags: 0

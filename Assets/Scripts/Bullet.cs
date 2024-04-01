@@ -5,11 +5,11 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
-    [SerializeField] private Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = transform.forward * speed;
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
         Destroy(gameObject, 4f);
     }
 
